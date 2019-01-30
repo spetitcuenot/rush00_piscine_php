@@ -1,0 +1,475 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    background: #EAEDED;
+    padding-bottom: 100px;
+}
+
+nav {
+    background: #232f3e;
+    margin-bottom: 50px;
+}
+
+nav .title {
+    display: inline-block;
+    font-size: 24px;
+    color: #f7f7f7;
+}
+
+nav ul {
+    display: inline-block;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 8px;
+}
+
+nav li a:hover,
+nav li a:focus {
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    padding: 7px;
+}
+
+li.categories ul {
+    display: none;
+    margin-top: 6px;
+    padding: 10px;
+    background: #fff;
+    position: absolute;
+    border: 1px solid;
+    border-radius: 4px;
+    min-width: 200px;
+    border-color: #adb1b8 #a2a6ac #8d9096;
+}
+
+li.categories:hover ul {
+    display: block;
+}
+
+li.categories > ul > li > a:after {
+    content: ' ';
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #444;
+}
+
+li.categories > ul > li > a, li.categories > ul > li > a:visited {
+    color: #444;
+    text-decoration: none;
+}
+
+li.categories > ul > li > a:hover, li.categories > ul > li > a:focus {
+    color: #c45500;
+    text-decoration: none;
+    border: none;
+    padding: 8px;
+}
+
+li.categories > ul > li {
+    display: block;
+    position: relative;
+    margin-top: 10px;
+}
+
+li.categories > ul > li:last-child {
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+.container-fluid,
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form-input {
+    margin-bottom: 10px;
+}
+
+*:focus {
+    outline: none;
+}
+
+.btn {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .4) inset;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 7px;
+    font-size: 14px;
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+}
+
+.btn:focus,
+.form-input input:focus,
+.form-input textarea:focus {
+    box-shadow: 0 0 3px 2px rgba(228, 121, 17, .5);
+}
+
+.btn.btn-default {
+    background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+    border-color: #adb1b8 #a2a6ac #8d9096;
+}
+
+.btn.btn-default:focus,
+.btn.btn-default:hover {
+    border-color: #a2a6ac #979aa1 #82858a;
+    background: linear-gradient(to bottom, #e7eaf0, #d9dce1);
+}
+
+.btn.btn-primary {
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+    border-color: #a88734 #9c7e31 #846a29;
+}
+
+.btn.btn-primary:focus,
+.btn.btn-primary:hover {
+    border-color: #a88734 #9c7e31 #846a29;
+    background: linear-gradient(to bottom, #f5d78e, #eeb933);
+}
+
+.form-input label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.form-input input,
+.form-input textarea {
+    border-radius: 3px;
+    border: 1px solid #c7c7c7;
+    padding: 7px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.alert {
+    margin-bottom: 20px;
+    border-radius: 4px;
+    padding: 15px;
+    border: 1px solid;
+}
+
+.alert p {
+    margin: 0;
+}
+
+.alert.alert-error {
+    border-color: #e53935;
+    box-shadow: 0 0 0 4px #ffebee inset;
+}
+
+.alert.alert-success {
+    border-color: #43a047;
+    box-shadow: 0 0 0 4px #e8f5e9 inset;
+}
+
+table {
+    border: 1px solid #ddd;
+    border-collapse: initial;
+    border-spacing: 0;
+    border-radius: 4px 4px 0 0;
+    border-bottom: none;
+    width: 100%;
+    text-align: left;
+}
+
+thead {
+    background: #f6f6f6;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+th, td {
+    padding: 7px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header {
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #c7c7c7;
+    width: 100%;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.header .actions {
+    display: inline-block;
+    float: right;
+    padding: 5px;
+}
+
+.header .title {
+    display: inline-block;
+    float: left;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.header a, .header a:visited,
+table li a, table li a:visited {
+    color: #039be5;
+    text-decoration: none;
+}
+
+.header a:hover, .header a:focus,
+table li a:hover, table li a:focus {
+    color: #006db3;
+    text-decoration: none;
+}
+
+.panel {
+    border-radius: 4px;
+    background: #FFF;
+    padding: 15px 40px 40px;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+.article {
+    display: block;
+    height: 105px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.article:last-child {
+    border-bottom: none;
+}
+
+.article .thumbnail {
+    float: left;
+    margin-right: 10px;
+}
+
+.article .price {
+    color: #B12704;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.article .delivery {
+    color: #555;
+    font-size: 12px;
+}
+
+.article .stock {
+    color: #B12704;
+    font-size: 12px;
+}
+
+.article .add-basket {
+    margin-top: 15px;
+}
+
+.article .title a, .article .title a:visited {
+    color: #0066c0;
+    text-decoration: none;
+}
+
+.article .title a:hover, .article .title a:focus {
+    color: #c45500;
+    text-decoration: none;
+}
+
+.checkbox input[type="checkbox"] {
+    width: auto;
+}
+
+.large-article {
+    min-height: 380px;
+}
+
+.large-article .thumbnail {
+    float: left;
+}
+
+.large-article .thumbnail img {
+    margin-right: 20px;
+    height: 380px;
+}
+
+.large-article .price {
+    color: #B12704;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.large-article .delivery {
+    color: #555;
+    font-size: 12px;
+}
+
+.large-article .stock {
+    color: #B12704;
+    font-size: 12px;
+}
+
+.large-article .add-basket {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.large-article h1 {
+    margin: 0;
+}
+
+.basket .item {
+    display: block;
+    height: 105px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.basket .item .thumbnail {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.basket .item .thumbnail img {
+    height: 100px;
+}
+
+.basket .item .price {
+    color: #B12704;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.basket .item .delivery {
+    color: #555;
+    font-size: 12px;
+}
+
+.basket .item .stock {
+    color: #B12704;
+    font-size: 12px;
+}
+
+.basket .item .title a, .basket .item .title a:visited {
+    color: #0066c0;
+    text-decoration: none;
+}
+
+.basket .item .title a:hover, .basket .item .title a:focus {
+    color: #c45500;
+    text-decoration: none;
+}
+
+.basket .item .delete-basket {
+    margin-top: 20px;
+}
+
+.basket-order {
+    margin-top: 20px;
+}
+
+.basket-order .total {
+    color: #B12704;
+    font-size: 14px;
+    float: left;
+}
+
+.basket-order .order {
+    float: right;
+}
+
+.recommendations {
+    margin-top: 30px;
+}
+
+.recommendations > .title {
+    color: #C60;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.recommendations .recommendeds {
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+}
+
+.recommendations {
+    padding: 8px;
+}
+
+.recommendations .recommended {
+    width: 20%;
+}
+
+.recommendations .recommended .thumbnail img {
+    height: 128px;
+    text-align: center;
+}
+
+.recommendations .recommended .title a,
+.recommendations .recommended .title a:visited {
+    color: #0066c0;
+    text-decoration: none;
+}
+
+.recommendations .recommended .title a:focus,
+.recommendations .recommended .title a:hover {
+    color: #c45500;
+    text-decoration: none;
+}
+
+.recommendations .recommended .price {
+    color: #B12704;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.recommendations .recommended .delivery {
+    color: #555;
+    font-size: 12px;
+}
+
+.recommendations .recommended .stock {
+    color: #B12704;
+    font-size: 12px;
+}
